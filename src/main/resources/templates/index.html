@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h1>Hello, Spring!</h1>
+<form action="/api/greet" method="post">
+	<input name="name" placeholder="Your name">
+	<button type="submit">Send</button>
+</form>
+<p th:text="${message}"></p>
+</body>
+</html>
