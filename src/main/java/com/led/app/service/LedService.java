@@ -1,5 +1,6 @@
 package com.led.app.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.led.app.model.LedConfigRequest;
@@ -7,6 +8,7 @@ import com.led.app.model.LedConfigRequest;
 @Service
 public class LedService
 {
+	@Autowired
 	private MqttPublisherService mqttPublisherService;
 
 	//mosquitto_pub -h 192.168.1.220 -t command -m '{"cmd":"effect","mode":"rainbow","speed":20}'
