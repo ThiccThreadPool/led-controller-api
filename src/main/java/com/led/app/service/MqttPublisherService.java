@@ -9,7 +9,6 @@ public class MqttPublisherService
 {
 	private final MqttClient mqttClient;
 
-
 	public MqttPublisherService(final MqttClient mqttClient)
 	{
 		this.mqttClient = mqttClient;
