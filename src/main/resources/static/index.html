@@ -3,37 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>LED Controller</title>
-	<style>
-		body {
-			font-family: sans-serif;
-			background: #111;
-			color: white;
-			padding: 2em;
-		}
-		form {
-			background: #1e1e1e;
-			padding: 20px;
-			border-radius: 10px;
-			width: 300px;
-		}
-		label {
-			display: block;
-			margin-top: 10px;
-		}
-		input, select, button {
-			width: 100%;
-			margin-top: 5px;
-			padding: 8px;
-			border: none;
-			border-radius: 5px;
-		}
-		button {
-			margin-top: 15px;
-			background: #0d6efd;
-			color: white;
-			cursor: pointer;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>LED Controller</h1>
@@ -60,27 +30,6 @@
 
 <p id="result"></p>
 
-<script>
-	document.getElementById("ledForm").addEventListener("submit", async (e) => {
-		e.preventDefault();
-
-		const data = {
-			color: document.getElementById("color").value,
-			brightness: parseInt(document.getElementById("brightness").value),
-			mode: document.getElementById("mode").value,
-			speed: document.getElementById("speed").value
-		};
-
-		const response = await fetch("/led/changeLedConfig", {
-			method: "PUT",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify(data)
-		});
-
-		const text = await response.text();
-		document.getElementById("result").innerText = text;
-	});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
