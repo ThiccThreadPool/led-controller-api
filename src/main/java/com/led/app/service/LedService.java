@@ -3,6 +3,7 @@ package com.led.app.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.led.app.exception.LedChangeException;
 import com.led.app.model.LedConfigRequest;
 
 @Service
@@ -35,7 +36,7 @@ public class LedService
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			throw new LedChangeException("Failed to change LED configuration: " + e.getMessage());
 		}
 	}
 }

@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>LED Controller</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>LED Controller</h1>
+<main>
+	<h1>LED Controller</h1>
 
-<form id="ledForm">
-	<label>Color:</label>
-	<input type="color" id="color" name="color" value="#FF0000">
+	<form id="ledForm">
+		<label for="color">Color:</label>
+		<input type="color" id="color" name="color" value="#FF0000">
 
-	<label>Brightness:</label>
-	<input type="number" id="brightness" name="brightness" min="0" max="255" value="128">
+		<label for="brightness">Brightness:</label>
+		<input type="number" id="brightness" name="brightness" min="0" max="255" value="128">
 
-	<label>Mode:</label>
-	<select id="mode" name="mode">
-		<option value="solid">Solid</option>
-		<option value="rainbow">Rainbow</option>
-		<option value="off">Off</option>
-	</select>
+		<label for="mode">Mode:</label>
+		<select id="mode" name="mode">
+			<option value="solid">Solid</option>
+			<option value="rainbow">Rainbow</option>
+			<option value="off">Off</option>
+		</select>
 
-	<label>Speed:</label>
-	<input type="number" id="speed" name="speed" min="1" max="100" value="50">
+		<label for="speed">Speed:</label>
+		<input type="number" id="speed" name="speed" min="1" max="100" value="50">
 
-	<button type="submit">Change LED</button>
-</form>
+		<button type="submit">Change LED</button>
+	</form>
 
-<p id="result"></p>
+	<p id="result"></p>
+</main>
 
 <script src="script.js"></script>
 </body>
